@@ -1,6 +1,5 @@
 import unittest
-import funtion_file
-
+from src.funtion_file import isInE
 
 class MyTestCase(unittest.TestCase):
     def test_Empty_String(self):
@@ -8,7 +7,7 @@ class MyTestCase(unittest.TestCase):
         string = ''
 
         # Action
-        result = funtion_file.isInE(string)
+        result = isInE(string)
 
         # Assert
         self.assertTrue(result)
@@ -18,7 +17,7 @@ class MyTestCase(unittest.TestCase):
         string = '((()()())())'
 
         # Action
-        result = funtion_file.isInE(string)
+        result = isInE(string)
 
         # Assert
         self.assertTrue(result)
@@ -28,7 +27,7 @@ class MyTestCase(unittest.TestCase):
         string = '()())('
 
         # Action
-        result = funtion_file.isInE(string)
+        result = isInE(string)
 
         # Assert
         self.assertFalse(result)
@@ -38,7 +37,7 @@ class MyTestCase(unittest.TestCase):
         string = '(a)(b)'
 
         # Action
-        result = funtion_file.isInE(string)
+        result = isInE(string)
 
         # Assert
         self.assertTrue(result)
@@ -48,7 +47,7 @@ class MyTestCase(unittest.TestCase):
         string = '(a(b))'
 
         # Action
-        result = funtion_file.isInE(string)
+        result = isInE(string)
 
         # Assert
         self.assertFalse(result)
@@ -58,7 +57,7 @@ class MyTestCase(unittest.TestCase):
         string = '(a)'
 
         # Action
-        result = funtion_file.isInE(string)
+        result = isInE(string)
 
         # Assert
         self.assertTrue(result)
@@ -68,7 +67,7 @@ class MyTestCase(unittest.TestCase):
         string = 'a)'
 
         # Action
-        result = funtion_file.isInE(string)
+        result = isInE(string)
 
         # Assert
         self.assertFalse(result)
